@@ -6,7 +6,9 @@ gem "middleman", "~>3.4.1"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.3.0"
-gem 'middleman-deploy', git: 'https://github.com/middleman-contrib/middleman-deploy', branch: 'master'
+
+gem "rack-contrib"
+gem "puma"
 
 # For faster file watcher updates on Windows:
 gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
