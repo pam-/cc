@@ -1,0 +1,198 @@
+@import 'bootstrap';
+@import "https://fonts.googleapis.com/css?family=Montserrat";
+@charset "utf-8";
+
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+     -moz-#{$name}: #{$argument};
+      -ms-#{$name}: #{$argument};
+       -o-#{$name}: #{$argument};
+          #{$name}: #{$argument};
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} { @content };
+  @-moz-keyframes #{$name}    { @content };
+  @-ms-keyframes #{$name}     { @content };
+  @-o-keyframes #{$name}      { @content };
+  @keyframes #{$name}         { @content };
+}
+
+@font-face {
+  font-family: "adam-cg-pro";
+  src: url("adam-cg-pro.otf"); /* IE9 Compat Modes */
+}
+
+// extends here so I dont need to create a new page
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+$pop: #ef6c00;
+$brown: #D8C8B8;
+$other-grey: #E2DDD9;
+$grey: #f1f3f2;
+$black: #000;
+$accent-blue: blue;
+
+body {
+  background: $grey;
+  font-family: 'Montserrat', 'Georgia', sans-serif;
+  color: $black;
+  h1 {
+    color: $pop;
+    font-weight: bold;
+  }
+}
+
+a {
+  color: inherit;
+}
+
+.row {
+  margin: 0;
+}
+
+.navbar {
+  border: none;
+  margin-bottom: 0;
+}
+
+header {
+  color: $brown;
+  font-weight: bold;
+  background-image: url("/images/typing.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  .overlay {
+    background: rgba(#000, 0.4);
+    height: 100%;
+    padding: 0;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      width: 50px;
+      margin: 20px;
+    }
+  }
+  .menu-items {
+    float: right;
+    @extend %clearfix;
+  }
+  ul {
+    padding: 2em 0 2em 0;
+    text-align: center;
+    li {
+      list-style-type: none;
+      text-transform: uppercase;
+    }
+  }
+  .col-lg-4,
+  .col-md-4,
+  .col-sm-4 {
+    float: none;
+  }
+  .box {
+    text-align: center;
+    border: 13px solid $pop;
+    padding: 0;
+    margin: 0 auto;
+    .inner-box {
+      background: rgba(#000, 0.3);
+      padding: 2em;
+      width: 100%;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8);
+    }
+    h1 {
+      margin: 0;
+      font-family: 'adam-cg-pro','Montserrat', 'Georgia', sans-serif;
+      color: $brown;
+      font-weight: bold;
+      font-size: 25px;
+      padding: 10px;
+    }
+  }
+}
+
+.m-content {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  .col-sm-12,
+  .col-md-12,
+  .col-lg-12 {
+    padding-top: 0;
+  }
+  h1,
+  h2 {
+    font-family: 'adam-cg-pro', 'Montserrat', sans-serif;
+    letter-spacing: -1px;
+  }
+  h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  h2 {
+    font-size: 23px;
+    text-transform: lowercase;
+  }
+
+  .box-orange {
+    background: $pop;
+    color: $grey;
+    h1 {
+      color: $grey;
+    }
+  }
+
+  .box {
+    text-align: center;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    float: none;
+    margin: 0 auto;
+  }
+  h3 {
+    text-align: left;
+    width: 160px;
+    margin: 0;
+    display: inline-block;
+  }
+  &.about {
+    h3 {
+      text-align: center;
+    }
+  }
+  .collapse-divs {
+    text-align: center;
+    margin: 20px;
+  }
+}
+
+span.btn-primary {
+  background-color: transparent;
+  border: 1px solid $pop;
+  color: $pop;
+  &:hover {
+    background-color: $pop;
+    border: 1px solid $grey;
+    color: $grey;
+  }
+}
+
+footer {
+  width: 100%;
+  display: inline-block;
+  padding: 2em;
+  text-align: center;
+}
