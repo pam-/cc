@@ -33,18 +33,32 @@
 }
 
 $pop: #ef6c00;
-$brown: #D8C8B8;
+$white: #fff;
+$blue: #00A0B0;
 $other-grey: #E2DDD9;
-$grey: #f1f3f2;
+$melon: #FFCFBC;
 $black: #000;
 $accent-blue: blue;
 
 body {
-  background: $grey;
+  background: $melon;
   font-family: 'Montserrat', 'Georgia', sans-serif;
   color: $black;
+  &::after {
+    background-size: 400px;
+    background-image: url("../images/colorfaces.svg");
+    content : "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity : 0.3;
+    z-index: -1;
+  }
   h1 {
-    color: $pop;
+    color: $white;
     font-weight: bold;
   }
 }
@@ -63,18 +77,18 @@ a {
 }
 
 header {
-  color: $brown;
+  color: $pop;
   font-weight: bold;
-  background-image: url("/images/typing.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-  .overlay {
-    background: rgba(#000, 0.4);
-    height: 100%;
-    padding: 0;
+  margin: 0 auto;
+  .navbar,
+  .col-sm-10,
+  .col-md-10,
+  .col-lg-8 {
+    float: none;
   }
   nav {
+    background: $white;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,6 +105,7 @@ header {
     padding: 2em 0 2em 0;
     text-align: center;
     li {
+      background: $white;
       list-style-type: none;
       text-transform: uppercase;
     }
@@ -102,7 +117,6 @@ header {
   }
   .box {
     text-align: center;
-    border: 13px solid $pop;
     padding: 0;
     margin: 0 auto;
     .inner-box {
@@ -114,7 +128,7 @@ header {
     h1 {
       margin: 0;
       font-family: 'adam-cg-pro','Montserrat', 'Georgia', sans-serif;
-      color: $brown;
+      color: $white;
       font-weight: bold;
       font-size: 25px;
       padding: 10px;
@@ -138,29 +152,53 @@ header {
     letter-spacing: -1px;
   }
   h1 {
+    color: $pop;
     font-size: 30px;
     text-align: center;
-    margin-bottom: 60px;
   }
   h2 {
     font-size: 23px;
     text-transform: lowercase;
   }
 
-  .box-orange {
-    background: $pop;
-    color: $grey;
-    h1 {
-      color: $grey;
-    }
+  p {
+    width: 600px;
+    margin: 10px auto;
   }
 
   .box {
+    border-radius: 4px;
+    background: $white;
     text-align: center;
     padding-bottom: 2em;
     padding-top: 2em;
     float: none;
-    margin: 0 auto;
+    margin: 40px auto;
+    @extend %clearfix;
+    svg {
+      width: 20px;
+    }
+    &.schedule {
+      .location {
+        margin: 0 auto;
+        width: 200px;
+      }
+    }
+    .daily-schedule {
+      background: #f5f5f5;
+      width: 400px;
+      margin: 10px;
+      padding: 20px;
+      height: 400px;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e3e3e3;
+      ul {
+        padding: 0;
+      }
+      li {
+        list-style-type: none;
+      }
+    }
   }
   h3 {
     text-align: left;
@@ -177,16 +215,20 @@ header {
     text-align: center;
     margin: 20px;
   }
+  .well-content {
+    width: 500px;
+    margin: 0 auto;
+  }
 }
 
 span.btn-primary {
   background-color: transparent;
-  border: 1px solid $pop;
-  color: $pop;
+  border: 1px solid $melon;
+  color: $melon;
   &:hover {
-    background-color: $pop;
-    border: 1px solid $grey;
-    color: $grey;
+    background-color: $melon;
+    border: 1px solid $white;
+    color: $white;
   }
 }
 
