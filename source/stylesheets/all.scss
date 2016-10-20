@@ -201,7 +201,9 @@ header {
         svg {
           width: 20px;
         }
-        h1 {span {font-size: 25px;}}
+        h1 {span {font-size: 25px;font-weight: normal;}}
+        h2 {span {display:inline-block;font-size: 18px;font-weight: normal;}}
+        h1, h2 {font-weight: bold; font-family: 'Montserrat', 'Georgia', sans-serif; text-transform: uppercase;}
         @media (max-width: 780px) {
           float: none;
           width: 100%;
