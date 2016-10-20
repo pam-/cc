@@ -55,7 +55,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity : 0.3;
+    opacity : 0.4;
     z-index: -1;
   }
 }
@@ -64,6 +64,7 @@ a {
   color: inherit;
   cursor: pointer;
   transition: background .5s;
+  text-decoration: none;
   &:hover,
   &:visited,
   &:active {
@@ -95,6 +96,9 @@ header {
     float: none;
   }
   nav {
+    .logo:hover {
+      background: none;
+    }
     background: $white;
     margin: 0 auto;
     display: flex;
@@ -149,6 +153,7 @@ header {
     display: inline-block;
   }
   h2 {
+    display: inline-block;
     font-size: 23px;
     text-transform: lowercase;
   }
@@ -168,6 +173,9 @@ header {
     p {
       font-size: 18px;
       font-weight: light;
+      .accent {
+        background: $melon;
+      }
     }
     a, h1 {
       color: $black;
@@ -245,6 +253,15 @@ header {
   }
 }
 
+.code-of-conduct {
+  .box {
+    padding: 40px;
+    h2 {
+      white-space: nowrap;
+    }
+  }
+}
+
 // BUTTONS
 span.btn-primary {
   background-color: transparent;
@@ -303,9 +320,16 @@ span.btn-primary {
   }
 }
 
-footer {
-  width: 100%;
-  display: inline-block;
+.footer {
+  background: #fff;
+  height: 30px;
   padding: 2em;
   text-align: center;
+  clear: both;
+  &.col-sm-10,
+  &.col-md-10,
+  &.col-lg-8 {
+    margin: 0 auto;
+    float: none;
+  }
 }
