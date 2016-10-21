@@ -6,13 +6,29 @@
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "The Middleman" %></title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/ico" sizes="64x64" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x28.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x14.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#f5af13">
+    <meta name="theme-color" content="#f5af13">
 
-    <%= stylesheet_link_tag "_normalize", "all" %>
+    <meta name="description" content="Join Vox Media's Product Diversity Committee on Nov 5th and 6th for the first edition of Color Coded.">
+    <link rel="canonical" href="http://colorcoded.voxmedia.com">
+    <meta property="og:description" content="Join Vox Media's Product Diversity Committee on Nov 5th and 6th for the first edition of Color Coded.">
+    <meta property="fb:app_id" content="549923288395304">
+    <meta property="og:image" content="http://colorcoded.voxmedia.com/images/share.jpg">
+    <meta property="og:site_name" content="Color Coded: Empowering People of Color">
+    <meta property="og:title" content="Color Coded: Empowering People of Color">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://colorcoded.voxmedia.com">
+    <title><%= current_page.data.title || "Color Coded: Empowering People of Color" %></title>
+
+    <%= stylesheet_link_tag "all" %>
   </head>
 
-  <body class="<%= page_classes %>">
+  <body class="<%= page_classes %> container-fluid">
     <%= yield %>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <%= javascript_include_tag  "all" %>

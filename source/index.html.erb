@@ -2,60 +2,67 @@
 title: Color Coded
 ---
 
-<header class="navbar">
-  <div class="overlay col-sm-12 col-md-12 col-lg-12">
-    <nav class="navbar">
-      <h1>color coded</h1>
-      <div class="menu-items col-sm-8 col-md-8 col-sm-8">
-        <div class="col-sm-6 col-md-6 col-lg-6">  </div>
-        <ul class="col-sm-6 col-md-6 col-lg-6">
-          <li class="col-sm-3 col-md-3 col-lg-3"><a href="#about">About</a></li>
-          <li class="col-sm-3 col-md-3 col-lg-3"><a href="#schedule">Schedule</a></li>
-          <li class="col-sm-3 col-md-3 col-lg-3"><a href="#register">Register</a></li>
-          <li class="col-sm-3 col-md-3 col-lg-3"><a href="#faq">FAQ</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div class="col-sm-4 col-md-4 col-lg-4 box">
-      <div class="inner-box">
-        <h4> Carving Safe Spaces For Creatives Of Color In Tech</h4>
-        <h1>NOV 5th-6th 2016</h1>
-        <h1> Washington, DC</h1>
+<header class="col-sm-12 col-md-12 col-lg-12">
+  <nav class="navbar col-sm-10 col-md-10 col-lg-8">
+    <a href="/" class="logo"><%= render_partial "partials/svg/logo.svg" %></a>
+    <div class="menu-items col-sm-8 col-md-8 col-lg-10">
+      <ul class="col-sm-6 col-md-6 col-lg-12" style="float: right;">
+        <li class="col-sm-6 col-md-5 col-lg-3"><a href="#about">About</a></li>
+        <li class="col-sm-6 col-md-5 col-lg-3"><a href="#schedule">Schedule</a></li>
+        <li class="col-sm-6 col-md-5 col-lg-3"><a href="#faq">FAQ</a></li>
+        <li class="col-sm-6 col-md-5 col-lg-3"><a href="#register">Register</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div class="row m-content about">
+
+  <div class="col-sm-12 col-md-12 col-lg-12">
+    <div class="col-sm-10 col-md-10 col-lg-8 box card">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <%= render_partial "partials/card.html.erb" %>
       </div>
     </div>
   </div>
-</header>
 
-<div class="col-sm-12 col-md-12 col-lg-12 m-content about">
   <a name="about"></a>
-  <div class="col-sm-12 col-md-12 col-lg-12 box-orange">
-    <div class="col-sm-10 col-md-10 col-lg-8 box">
-      <%= render_partial "partials/about.html.erb" %>
+  <div class="col-sm-12 col-md-12 col-lg-12">
+    <div class="col-sm-12 col-md-10 col-lg-8 box">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <%= render_partial "partials/about.html.erb" %>
+        <%= render_partial "partials/register.html.erb" %>
+      </div>
     </div>
   </div>
 
   <a name="schedule"></a>
   <div class="col-sm-12 col-md-12 col-lg-12">
-    <div class="col-sm-10 col-md-10 col-lg-8 box">
-      <%= render_partial "partials/schedule.html.erb" %>
+    <div class="col-sm-10 col-md-10 col-lg-8 box schedule">
+      <div class="col-sm-8 col-md-8 col-lg-12">
+        <%= render_partial "partials/schedule.html.erb" %>
+      </div>
     </div>
   </div>
-  <a name="register"></a>
-  <div class="col-sm-12 col-md-12 col-lg-12 box box-orange">
-    <div class="col-sm-10 col-md-10 col-lg-8 box">
-      <%= render_partial "partials/register.html.erb" %>
+  <a name="faq"></a>
+  <div class="col-sm-12 col-md-12 col-lg-12">
+    <div class="col-sm-12 col-md-10 col-lg-8 box">
+      <h1>FAQ</h1>
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <%= render_partial "partials/faq" %>
+        </div>
     </div>
   </div>
 
-  <a name="faq"></a>
+  <a name="register"></a>
   <div class="col-sm-12 col-md-12 col-lg-12">
-    <div class="col-sm-10 col-md-10 col-lg-8 box">
-      <h1>FAQ</h1>
-        <%= render_partial "partials/faq" %>
+    <div class="col-sm-12 col-md-10 col-lg-8 box">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <%= render_partial "partials/register.html.erb" %>
+      </div>
     </div>
   </div>
 </div>
-
-<footer class="col-sm-12 col-md-12 col-lg-12">
-  2016 | Vox Media Inc | All Rights Reserved
-</footer>
+<div>
+<%= render_partial "partials/footer.html.erb" %>
+</div>
