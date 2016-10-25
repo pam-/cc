@@ -204,6 +204,14 @@ header {
         svg {
           width: 20px;
         }
+        .button-before-small {
+          &:before {
+            border: 3px solid #fff;
+          }
+        }
+        .button-container-small {
+          text-align: left;
+        }
         h1 {span {font-size: 25px;font-weight: normal;}}
         h2 {span {display:inline-block;font-size: 18px;font-weight: normal;}}
         h1, h2 {font-weight: bold; font-family: 'Montserrat', 'Georgia', sans-serif; text-transform: uppercase;}
