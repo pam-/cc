@@ -272,6 +272,9 @@ header {
     &.schedule {
       .location {
         text-align: center;
+        p {
+          text-align: center;
+        }
         span {
           display: block;
           font-size: 18px;
@@ -284,7 +287,6 @@ header {
       width: 45%;
       margin: 10px;
       padding: 20px;
-      height: 400px;
       box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
       border: 1px solid #e3e3e3;
       &.saturday {
