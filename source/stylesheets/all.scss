@@ -102,7 +102,7 @@ header {
     float: none;
   }
   nav {
-    .logo:hover {
+    a:hover {
       background: none;
     }
     background: $white;
@@ -116,17 +116,21 @@ header {
     }
   }
   .menu-items {
-    float: right;
+    margin-left: auto;
     @extend %clearfix;
   }
   ul {
-    padding: 2em 0 2em 0;
+    // padding: 2em 0 2em 0;
     text-align: center;
+    margin: 0;
     li {
-      font-size: 20px;
       background: $white;
       list-style-type: none;
-      text-transform: uppercase;
+      display: inline-block;
+      svg {
+        width: 30px;
+        margin: 20px;
+      }
     }
   }
   .col-lg-4,
@@ -151,7 +155,7 @@ header {
   h2 {
     color: $black;
     background: $melon;
-    text-align: left;
+    text-align: center;
     font-family: 'adam-cg-pro', 'Montserrat', sans-serif;
     letter-spacing: -1px;
   }
@@ -177,6 +181,24 @@ header {
     @extend %clearfix;
     svg {
       width: 20px;
+    }
+    .m-content--dek {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+    .m-content--project {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      h2 {
+        padding: 10px;
+        background: none;
+        border: 8px solid $melon;
+        margin-bottom: 30px;
+      }
+      .m-content--subtitle {
+        margin-top: 40px;
+      }
     }
     p{text-align: left;}
     .explainer {font-size: 15px;}
@@ -244,7 +266,7 @@ header {
         background: $melon;
       }
     }
-    a, h1 {
+    a, h1, .m-content--subtitle {
       color: $black;
       display: inline-block;
       &:after {
