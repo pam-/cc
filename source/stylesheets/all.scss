@@ -190,6 +190,16 @@ header {
     .m-content--project {
       margin-top: 30px;
       margin-bottom: 50px;
+      h2 a {
+        &:after {
+          display: none;
+        }
+      }
+      img {
+        max-width: 250px;
+        display: block;
+        margin: 0 auto;
+      }
       h2 {
         padding: 10px;
         background: none;
