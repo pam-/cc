@@ -12,18 +12,60 @@ title: Color Coded
       </ul>
     </div>
   </nav>
+  <nav class="subnav col-sm-10 col-md-10 col-lg-8">
+    <a href="/recap.html">Find out more about Color Coded ✊🏿 ✊🏾 ✊🏽 </a>
+  </nav>
 </header>
 
+<!-- main body -->
 <div class="row m-content about">
+
+  <div class="col-sm-12 col-md-12 col-lg-12">
+    <div class="col-sm-10 col-md-10 col-lg-8 box flyer">
+      <div class="poster-container">
+        <div class="col-sm-12 col-md-12 col-lg-12" style="padding: 0;">
+          <%= render_partial "partials/flyer.html.erb" %>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="col-sm-12 col-md-12 col-lg-12">
     <div class="col-sm-10 col-md-10 col-lg-8 box">
       <div class="col-sm-12 col-md-12 col-lg-12">
-        <%= render_partial "partials/projects.html.erb" %>
+        <%= render_partial "partials/dyp.html.erb" %>
       </div>
     </div>
   </div>
+
+  <div class="col-sm-12 col-md-12 col-lg-12" name="schedule">
+    <div class="col-sm-10 col-md-10 col-lg-8 box">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <%= render_partial "partials/schedule.html.erb" %>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-sm-12 col-md-12 col-lg-12">
+    <div class="col-sm-10 col-md-10 col-lg-8 box">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <%= render_partial "partials/about.html.erb" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12 col-md-12 col-lg-12">
+    <div class="col-sm-10 col-md-10 col-lg-8 box">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <%= render_partial "partials/faq.html.erb" %>
+      </div>
+    </div>
+  </div>
+
 </div>
+
+<!-- footer -->
 <div>
 <%= render_partial "partials/footer.html.erb" %>
 </div>
